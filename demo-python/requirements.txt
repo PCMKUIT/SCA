@@ -1,3 +1,10 @@
-django==3.1.0
-requests==2.25.1
-flask==1.0.0
+django==1.6.0
+flask==0.10.1
+requests==2.3.0
+tensorflow==1.0.0
+numpy==1.8.0
+pillow==2.0.0
+urllib3==1.7.1
+pyyaml==3.10
+jinja2==2.6
+sqlparse==0.1.0
