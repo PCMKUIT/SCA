@@ -1,0 +1,39 @@
+name: Dependency Vulnerability Scan
+
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  dependency-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install tools
+        run: |
+          pip install pip-audit safety
+          npm install -g npm@latest
+          sudo snap install osv-scanner
+
+      - name: Run Python audit
+        run: bash tools/pip_audit.sh || true
+
+      - name: Run npm audit
+        run: bash tools/npm_audit.sh || true
+
+      - name: Run OSV scan
+        run: bash tools/osv_scan.sh || true
+
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-reports
+          path: report/
