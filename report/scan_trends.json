@@ -1,0 +1,26 @@
+[
+  {
+    "timestamp": "2025-11-13T04:43:13+00:00",
+    "critical": 11,
+    "high": 11,
+    "medium": 10,
+    "total": 32,
+    "project": "SCA"
+  },
+  {
+    "timestamp": "2025-11-13T04:47:41+00:00",
+    "critical": 11,
+    "high": 11,
+    "medium": 10,
+    "total": 32,
+    "project": "SCA"
+  },
+  {
+    "timestamp": "2025-11-13T04:48:57+00:00",
+    "critical": 1,
+    "high": 1,
+    "medium": 1,
+    "total": 3,
+    "project": "SCA"
+  }
+]
