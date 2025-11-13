@@ -1,0 +1,7 @@
+{
+  "name": "demo-node",
+  "dependencies": {
+    "lodash": "4.17.15",
+    "express": "4.16.0"
+  }
+}
